@@ -1,0 +1,12 @@
+[package]
+name = "runner"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[profile.release]
+
+
+[dependencies]
+wasmtime = "1.0.0"
+anyhow = { version = "1.0" }

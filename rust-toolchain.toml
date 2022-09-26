@@ -1,0 +1,7 @@
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]
+targets = ["wasm32-wasi", "wasm32-unknown-unknown"]
+
+# Note: rebuilding the wasm requires targets
+# wasm32-unknown-unknown and wasm32-wasi
