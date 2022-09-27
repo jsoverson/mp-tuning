@@ -17,6 +17,11 @@ build:
 	cargo build -p messagepack --release --target wasm32-wasi
 	wasm-opt --strip-debug -Oz target/wasm32-wasi/release/messagepack.wasm -o messagepack-wasi.wasm
 #
+	cargo +nightly build -p no_std_embedded_msgpack_alloc --release --target wasm32-unknown-unknown
+	wasm-opt --strip-debug -Oz target/wasm32-unknown-unknown/release/no_std_embedded_msgpack_alloc.wasm -o no_std_embedded_msgpack_alloc.wasm
+	cargo +nightly build -p no_std_embedded_msgpack_alloc --release --target wasm32-wasi
+	wasm-opt --strip-debug -Oz target/wasm32-wasi/release/no_std_embedded_msgpack_alloc.wasm -o no_std_embedded_msgpack_alloc-wasi.wasm
+#
 	cargo build -p no_std_bincode --release --target wasm32-unknown-unknown
 	wasm-opt --strip-debug -Oz target/wasm32-unknown-unknown/release/no_std_bincode.wasm -o no_std_bincode.wasm
 	cargo build -p no_std_bincode --release --target wasm32-wasi
