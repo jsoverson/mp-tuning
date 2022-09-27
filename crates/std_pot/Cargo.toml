@@ -1,0 +1,11 @@
+[package]
+name = "std_pot"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pot = { version = "1.0.2" }
+serde = { version = "1.0", default-features = false, features = ["derive"] }
