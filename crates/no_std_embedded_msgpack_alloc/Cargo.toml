@@ -1,0 +1,12 @@
+[package]
+name = "no_std_embedded_msgpack_alloc"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+embedded-msgpack = { version = "0.2", features = ["alloc"] }
+serde = { version = "1.0", default-features = false, features = ["derive", "alloc"] }
+lol_alloc = { version = "0.1", default-features = false }
